@@ -1,0 +1,81 @@
+/* Container for the entire navbar, spanning full width */
+.navbar-container {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+  background: linear-gradient(135deg, #4A6CF7, #22aaee, #66b5ff);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+
+.navbar-content {
+  width: 70%;
+  height: 7.5vh;
+  background-color: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 1cap;
+  padding: 0 1.5%;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Arial';
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.logo span {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+.nav-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li {
+  margin-left: 5px;
+}
+
+.nav-links button {
+  text-decoration: none;
+  color: #fff;
+  font-size: 100%;
+  font-weight: 600;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.nav-links button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  transition: background-color 0.3s ease;
+}
+
+
+.nav-links button:hover::before {
+  background-color: rgba(255, 255, 255, 0.3);
+}
