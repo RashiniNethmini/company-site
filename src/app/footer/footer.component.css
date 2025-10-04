@@ -13,7 +13,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.2rem 7.5rem;
+  padding: 1.2rem 5%;
   flex-wrap: wrap; /* allows wrapping on small screens */
   cursor: default;
 }
