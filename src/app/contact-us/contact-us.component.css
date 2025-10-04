@@ -1,0 +1,246 @@
+.contact-section {
+  padding: 50px 20px;
+  background-color: #f8f9fa;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 50px;
+}
+
+/* ----------------- Contact Container ----------------- */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.contact-form,
+.contact-details {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  border: 2px solid rgb(194, 187, 187);
+  flex: 1;
+  cursor: default;
+}
+
+/* ----------------- Form ----------------- */
+.form-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 15px;
+}
+
+.form-row.full-width {
+  width: 100%;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid rgb(194, 187, 187);
+  border-radius: 8px;
+  font-size: 1em;
+  color: #555;
+  transition: border-color 0.3s ease;
+  font-weight: bold;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #4A6CF7;
+}
+
+.contact-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+/* ----------------- Button ----------------- */
+.send-message-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #4A6CF7;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 25px;
+  font-size: 1em;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.send-message-button:hover {
+  background-color: #3855c5;
+}
+
+.send-message-button svg {
+  width: 20px;
+  height: 20px;
+  stroke: #fff;
+}
+
+/* ----------------- Details ----------------- */
+.detail-group {
+  margin-bottom: 25px;
+}
+
+.icon-text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+  color: #000000;
+  font-weight: 500;
+}
+
+.icon-text svg {
+  width: 22px;
+  height: 22px;
+  stroke: #000000;
+}
+
+.detail-value {
+  margin: 0;
+  padding-left: 32px;
+  color: #000000;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.social-icons a svg {
+  width: 24px;
+  height: 24px;
+  stroke: #555;
+  transition: stroke 0.3s ease;
+}
+
+.social-icons a:hover svg {
+  stroke: #4A6CF7;
+}
+
+.social-group .social-icons {
+  display: flex;
+  gap: 20px;
+  padding-left: 32px;
+}
+
+/* ----------------- Responsive Adjustments ----------------- */
+
+/* Tablet: width ≤ 760px */
+@media (max-width: 760px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 5%;
+  }
+
+  .contact-form, .contact-details {
+    width: 90%;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 1rem;
+  }
+
+  .form-row input {
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  /* 🔹 Smaller inputs & textarea */
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px 12px;
+    font-size: 0.95em;
+  }
+
+  /* 🔹 Smaller button */
+  .send-message-button {
+    padding: 10px 18px;
+    font-size: 0.95em;
+  }
+}
+
+/* Large Mobile: width ≤ 425px */
+@media (max-width: 425px) {
+  .section-title {
+    font-size: 2em;
+  }
+
+  .contact-form, .contact-details {
+    padding: 20px;
+  }
+
+  .send-message-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .social-group .social-icons {
+    gap: 15px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 9px 11px;
+    font-size: 0.9em;
+  }
+}
+
+/* Medium Mobile: width ≤ 375px */
+@media (max-width: 375px) {
+  .section-title {
+    font-size: 1.8em;
+  }
+
+  .contact-form, .contact-details {
+    padding: 15px;
+  }
+
+  .contact-form textarea {
+    min-height: 120px;
+    font-size: 0.9em;
+  }
+
+  .send-message-button {
+    padding: 9px 15px;
+    font-size: 0.9em;
+  }
+}
+
+/* Small Mobile: width ≤ 320px */
+@media (max-width: 320px) {
+  .section-title {
+    font-size: 1.6em;
+  }
+
+  .contact-form, .contact-details {
+    padding: 10px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 8px 10px;
+    font-size: 0.85em;
+  }
+
+  .send-message-button {
+    padding: 8px 12px;
+    font-size: 0.85em;
+  }
+}
