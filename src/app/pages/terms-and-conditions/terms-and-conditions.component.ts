@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-terms-and-conditions',
@@ -7,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrl: './terms-and-conditions.component.css'
 })
 export class TermsAndConditionsComponent {
+
+  @Output() closeModal = new EventEmitter<void>();
+
+  close() {
+    this.closeModal.emit(); // just tell parent to hide
+  }
 
 }

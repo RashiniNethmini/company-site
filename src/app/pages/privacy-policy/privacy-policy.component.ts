@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-privacy-policy',
@@ -7,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrl: './privacy-policy.component.css'
 })
 export class PrivacyPolicyComponent {
+
+   @Output() closeModal = new EventEmitter<void>();
+
+  close() {
+    this.closeModal.emit();
+  }
 
 }
