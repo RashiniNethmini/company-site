@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-footer',
-  imports: [],
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.css'
+  styleUrls: ['./footer.component.css']
 })
 export class FooterComponent {
+  constructor(private app: AppComponent) {}
 
+  scrollTo(section: string) {
+    this.app.scrollToSection(section);
+  }
 }

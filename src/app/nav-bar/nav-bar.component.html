@@ -13,11 +13,13 @@
     <!-- Navigation links -->
     <nav class="nav-links" [ngClass]="{'menu-open': isMenuOpen()}">
       <ul>
+        <li><a (click)="scrollTo('home'); toggleMenu()">Home</a></li>
+        <li><a (click)="scrollTo('contact'); toggleMenu()">Contact Us</a></li>
+
         <li><a routerLink="/services" routerLinkActive="active-link" (click)="toggleMenu()">Services</a></li>
         <li><a routerLink="/works" routerLinkActive="active-link" (click)="toggleMenu()">Works</a></li>
         <li><a routerLink="/about" routerLinkActive="active-link" (click)="toggleMenu()">About Us</a></li>
         <li><a routerLink="/why-us" routerLinkActive="active-link" (click)="toggleMenu()">Why Us</a></li>
-        <li><a routerLink="/contact" routerLinkActive="active-link" (click)="toggleMenu()">Contact</a></li>
       </ul>
     </nav>
   </div>

@@ -1,6 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-nav-bar',
@@ -10,9 +11,19 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent {
-  isMenuOpen = signal(false);
+  menuOpen = false;
+  constructor(private app: AppComponent) {}
 
   toggleMenu() {
-    this.isMenuOpen.update(value => !value);
+    this.menuOpen = !this.menuOpen;
   }
+
+  isMenuOpen() {
+    return this.menuOpen;
+  }
+
+  scrollTo(section: string) {
+    this.app.scrollToSection(section);
+  }
+
 }
