@@ -1,17 +1,20 @@
 .home-container {
   width: 100%;
-  height: 85vh;
+  min-height: 85vh;
   display: flex;
   justify-content: center;
-  background: linear-gradient(135deg, #4A6CF7, #0899e1, #22aaee, #00CFFF);
   align-items: center;
   flex-direction: column;
-  cursor: default;
+  background: linear-gradient(135deg, #4A6CF7, #0899e1, #22aaee, #00CFFF);
   color: white;
+  text-align: center;
   font-family: 'Arial', sans-serif;
+  padding: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: default;
 }
 
+/* === Headings === */
 .home-container h1 {
   font-size: 3em;
   margin-bottom: 0;
@@ -19,89 +22,121 @@
 
 .home-container h2 {
   font-size: 3em;
-  margin-top: -1.3%;
-  margin-bottom: 0;
+  margin-top: -1%;
+  margin-bottom: 10px;
+  color: #fff;
 }
 
+/* === Paragraph === */
 .home-container p {
   font-size: 1.1em;
   font-weight: 600;
+  line-height: 1.6;
   margin-top: 5px;
+  max-width: 700px;
 }
 
+/* === Buttons === */
 .button-group {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 15px;
   margin-top: 25px;
+  flex-wrap: wrap; /* So buttons stack on small screens */
 }
 
-.get-in-touch-button {
+.get-in-touch-button,
+.view-work-button {
   display: flex;
   align-items: center;
-  gap: 8px; /* Reduced gap between icon and text */
-
-  background-color: #FFD700;
-  color: #222;
-
-  font-family: 'Arial', sans-serif;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 25px;
   font-size: 1em;
   font-weight: 700;
-
-  padding: 12px 25px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* === Get in touch button === */
+.get-in-touch-button {
+  background-color: #FFD700;
+  color: #222;
 }
 
 .get-in-touch-button:hover {
   background-color: #e0bb00;
-  transform: translateY(-1px); /* Smaller lift effect */
+  transform: translateY(-2px);
 }
 
-.get-in-touch-button .send-icon {
-  width: 20px; /* Reduced icon size */
-  height: 20px;
-  stroke: #222;
-}
-
+/* === View work button === */
 .view-work-button {
-  display: flex;
-  align-items: center;
-  gap: 8px; /* Space between icon and text */
-
-  background-color: rgba(255, 255, 255, 0.2); /* Transparent white background */
-  color: #fff; /* White text color */
-
-  font-family: 'Arial', sans-serif;
-  font-size: 1em;
-  font-weight: 700;
-
-  padding: 12px 25px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
 }
 
 .view-work-button:hover {
-  background-color: rgba(255, 255, 255, 0.3); /* Slightly more opaque on hover */
-  transform: translateY(-1px);
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
 }
 
-.view-work-button .caret-icon {
-  display: flex; /* To center the SVG inside the div if needed */
-  align-items: center;
-  justify-content: center;
-}
-
-.view-work-button .caret-icon svg {
-  width: 20px; /* Icon size */
+/* === Icon Styling === */
+.view-work-button .caret-icon svg,
+.get-in-touch-button svg {
+  width: 20px;
   height: 20px;
-  stroke: #fff; /* Icon color (matches text) */
+}
+
+/* === Responsive Breakpoints === */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .home-container h1,
+  .home-container h2 {
+    font-size: 2.3em;
+  }
+
+  .home-container p {
+    font-size: 1em;
+  }
+
+  .button-group {
+    gap: 10px;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 600px) {
+  .home-container {
+    padding: 40px 15px;
+    text-align: center;
+  }
+
+  .home-container h1 {
+    font-size: 1.8em;
+  }
+
+  .home-container h2 {
+    font-size: 1.8em;
+  }
+
+  .home-container p {
+    font-size: 0.95em;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .get-in-touch-button,
+  .view-work-button {
+    width: 100%;
+    max-width: 300px;
+    font-size: 0.95em;
+  }
 }

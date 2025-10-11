@@ -3,7 +3,14 @@
     <div class="logo">
       <span>🚀 Zoura Labs</span>
     </div>
-    <nav class="nav-links">
+
+    <div class="hamburger" (click)="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav class="nav-links" [class.active]="menuOpen">
       <ul>
         <li><button class="service-button">Service</button></li>
         <li><button class="work-button">Works</button></li>
