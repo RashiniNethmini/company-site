@@ -14,6 +14,10 @@ export class NavBarComponent {
   menuOpen = false;
   constructor(private app: AppComponent) {}
 
+  reloadPage(): void {
+  window.location.reload();
+}
+
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
   }

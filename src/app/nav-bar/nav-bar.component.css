@@ -28,18 +28,19 @@
   transition: all 0.4s ease-in-out;
 }
 
-.logo span {
-  font-size: 20px;
-  font-weight: bold;
-  color: #fff;
+.logo img {
+  height: 45px;
+  width: auto;
   cursor: pointer;
-  transition: all 0.3s ease;
+  display: block;
+  transition: transform 0.3s ease;
+  border-radius: 25%;
 }
 
-.logo span:hover {
+.logo img:hover {
   transform: scale(1.05);
-  color: #ffd700;
 }
+
 
 /* ---------------- Navigation Links ---------------- */
 .nav-links ul {
@@ -109,7 +110,12 @@
 }
 
 /* ---------------- Tablet & Mobile Menu ---------------- */
-@media (max-width: 760px) {
+@media (max-width: 1024px) {
+
+  .logo img{
+    height: 40px;
+  }
+
   .navbar-content {
     width: 90%;
     height: 6vh;
@@ -161,8 +167,8 @@
 
 /* ---------------- Mobile Large (<= 425px) ---------------- */
 @media (max-width: 425px) {
-  .logo span {
-    font-size: 1.25rem;
+  .logo img{
+    height: 30px;
   }
 
   .navbar-content {
@@ -176,8 +182,8 @@
 
 /* ---------------- Mobile Medium (<= 375px) ---------------- */
 @media (max-width: 375px) {
-  .logo span {
-    font-size: 1.1rem;
+  .logo img {
+    height: 25px;
   }
 
   .nav-links.menu-open {
@@ -187,8 +193,8 @@
 
 /* ---------------- Mobile Small (<= 320px) ---------------- */
 @media (max-width: 320px) {
-  .logo span {
-    font-size: 1rem;
+  .logo img {
+    height: 20px;
   }
 
   .nav-links.menu-open {
