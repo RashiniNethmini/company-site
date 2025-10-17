@@ -1,10 +1,5 @@
-* {
+*{
   box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0;
 }
 
 .footer-container {
@@ -22,6 +17,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 0.3rem;
 }
 
 .footer-text1 {

@@ -15,8 +15,8 @@ export class NavBarComponent {
   constructor(private app: AppComponent) {}
 
   reloadPage(): void {
-  window.location.reload();
-}
+    window.location.reload();
+  }
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
@@ -29,5 +29,4 @@ export class NavBarComponent {
   scrollTo(section: string) {
     this.app.scrollToSection(section);
   }
-
 }
