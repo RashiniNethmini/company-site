@@ -1,6 +1,24 @@
 <app-nav-bar></app-nav-bar>
-<app-home></app-home>
-<app-service></app-service>
-<app-choose-us></app-choose-us>
-<app-footer></app-footer>
+
+<!-- Main single-page sections -->
+<div id="home">
+  <app-home></app-home>
+</div>
+
+<div id="contact">
+  <app-contact-us></app-contact-us>
+</div>
+
+<div>
+  <!-- Service component removed because it's not declared; add its module or declare it in AppModule to use it -->
+  <!-- <app-service></app-service> -->
+</div>
+<!-- Router outlet for full pages like Privacy & Terms -->
+
+
+
 <router-outlet></router-outlet>
+
+<app-footer></app-footer>
+
+

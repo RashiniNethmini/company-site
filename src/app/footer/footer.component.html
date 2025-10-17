@@ -1,20 +1,30 @@
 <div class="footer-container">
   <div class="footer-left">
     <p class="footer-text1">Designing the future of software</p>
-    <p class="footer-text2">© 2025 Zuora Labs. All rights reserved.</p>
+    <p class="footer-text2">© 2025 Zoura Labs. All rights reserved.</p>
   </div>
 
   <div class="footer-right">
     <nav class="footer-links">
       <ul>
-        <li><a href="/privacy-policy">Privacy Policy</a></li>
-        <li><a href="/terms-conditions">Terms & Conditions</a></li>
-        <li><a href="/services">Services</a></li>
-        <li><a href="/works">Works</a></li>
-        <li><a href="/about">About Us</a></li>
-        <li><a href="/why-us">Why Us</a></li>
-        <li><a href="/contact">Contact</a></li>
+        <!-- Routed pages -->
+        <li><a (click)="showPrivacy = true">Privacy Policy</a></li>
+        <li><a (click)="showTerms = true">Terms & Conditions</a></li>
+
+        <!-- Internal scroll sections -->
+        <li><a (click)="scrollTo('home')">Home</a></li>
+        <li><a (click)="scrollTo('contact')">Contact Us</a></li>
+
+        <!-- Other routes -->
+        <li><a routerLink="/services">Services</a></li>
+        <li><a routerLink="/works">Works</a></li>
+        <li><a routerLink="/about">About Us</a></li>
+        <li><a routerLink="/why-us">Why Us</a></li>
       </ul>
     </nav>
   </div>
 </div>
+
+<!-- Modals should be outside the <ul> -->
+<app-privacy-policy *ngIf="showPrivacy" (closeModal)="showPrivacy = false"></app-privacy-policy>
+<app-terms-and-conditions *ngIf="showTerms" (closeModal)="showTerms = false"></app-terms-and-conditions>

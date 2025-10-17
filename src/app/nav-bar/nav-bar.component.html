@@ -1,22 +1,23 @@
 <div class="navbar-container">
   <div class="navbar-content">
     <div class="logo">
-      <span>🚀 Zoura Labs</span>
+      <img src="assets/images/logo.png" alt="Zoura Labs Logo" class="h-8 inline-block mr-2"  (click)="reloadPage()"/>
     </div>
 
-    <div class="hamburger" (click)="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+    <!-- Hamburger menu button for tablet/mobile -->
+    <button class="hamburger-menu-btn" (click)="toggleMenu()">
+      <span class="material-icons text-white text-3xl" *ngIf="!isMenuOpen()">menu</span>
+      <span class="material-icons text-white text-3xl" *ngIf="isMenuOpen()">close</span>
+    </button>
 
-    <nav class="nav-links" [class.active]="menuOpen">
+    <!-- Navigation links -->
+    <nav class="nav-links" [ngClass]="{'menu-open': isMenuOpen()}">
       <ul>
-        <li><button class="service-button">Service</button></li>
-        <li><button class="work-button">Works</button></li>
-        <li><button class="about-button">About Us</button></li>
-        <li><button class="why-button">Why Us</button></li>
-        <li><button class="contact-button">Contact</button></li>
+        <li><a routerLink="/services" routerLinkActive="active-link" (click)="toggleMenu()">Services</a></li>
+        <li><a routerLink="/works" routerLinkActive="active-link" (click)="toggleMenu()">Works</a></li>
+        <li><a routerLink="/about" routerLinkActive="active-link" (click)="toggleMenu()">About Us</a></li>
+        <li><a routerLink="/why-us" routerLinkActive="active-link" (click)="toggleMenu()">Why Us</a></li>
+        <li><a routerLink="/contact" routerLinkActive="active-link" (click)="toggleMenu()">Contact</a></li>
       </ul>
     </nav>
   </div>
