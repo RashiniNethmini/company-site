@@ -1,66 +1,396 @@
-<!-- Overlay Background -->
+<!-- privacy-policy.component.html -->
 <div class="privacy-overlay">
   <div class="privacy-modal">
-    <h1>Privacy Policy – Zuora Labs</h1>
-    <p><strong>Effective Date:</strong> September 2025</p>
+    <button class="close-btn" (click)="close()" aria-label="Close">×</button>
 
-    <h2>1. Introduction</h2>
-    <p>
-      At <strong>Zuora Labs</strong>, we value your privacy and are committed to protecting your personal information.
-      This Privacy Policy explains how we collect, use, and safeguard the data you provide while using our website and services.
-    </p>
+    <div class="modal-header">
+      <h1>Privacy Policy</h1>
+      <p class="company-name">Zuora Labs</p>
+    </div>
 
-    <h2>2. Information We Collect</h2>
-    <ul>
-      <li><strong>Personal Information:</strong> Name, email address, phone number, or any information you provide when contacting us.</li>
-      <li><strong>Usage Information:</strong> Details on how you interact with our website, such as pages visited, time spent, and clicks.</li>
-      <li><strong>Cookies & Tracking:</strong> We may use cookies to improve website performance and user experience.</li>
-    </ul>
+    <div class="modal-content">
+      <div class="last-updated">
+        <strong>Effective Date:</strong> September 2025
+      </div>
 
-    <h2>3. How We Use Your Information</h2>
-    <ul>
-      <li>Providing and improving our services.</li>
-      <li>Responding to inquiries and requests.</li>
-      <li>Sending updates about our company, services, or events (if you opt-in).</li>
-      <li>Analyzing website usage to enhance performance and usability.</li>
-    </ul>
+      <div class="section">
+        <h2>1. Introduction</h2>
+        <p>
+          At <strong>Zuora Labs</strong>, we value your privacy and are committed to protecting your personal information.
+          This Privacy Policy explains how we collect, use, disclose, and safeguard the data you provide while using our
+          software products, services, website, mobile applications, and desktop applications (collectively, the "Services").
+        </p>
+        <div class="highlight-box">
+          <p><strong>Our Commitment:</strong> We are transparent about our data practices and give you control over your information.</p>
+        </div>
+      </div>
 
-    <h2>4. Sharing Your Information</h2>
-    <p>
-      We respect your privacy and <strong>do not sell or share your personal information</strong> with third parties for marketing purposes.
-      We may share data with trusted service providers to help operate our services or comply with legal obligations.
-    </p>
+      <div class="section">
+        <h2>2. Information We Collect</h2>
 
-    <h2>5. Security of Your Information</h2>
-    <p>
-      We implement industry-standard security measures to protect your data from unauthorized access, disclosure, or alteration.
-      However, no method of transmission over the internet is completely secure, and we cannot guarantee absolute security.
-    </p>
+        <h3>2.1 Information You Provide Directly</h3>
+        <p><strong>Personal Information:</strong></p>
+        <ul>
+          <li>Name (first and last)</li>
+          <li>Email address</li>
+          <li>Phone number</li>
+          <li>Company name and job title (for business accounts)</li>
+          <li>Password (encrypted)</li>
+          <li>Profile picture or avatar</li>
+        </ul>
 
-    <h2>6. Your Rights</h2>
-    <ul>
-      <li>Request access to the personal data we hold about you.</li>
-      <li>Request corrections or deletions of your personal information.</li>
-      <li>Opt out of receiving marketing communications.</li>
-    </ul>
+        <p><strong>Payment Information:</strong></p>
+        <ul>
+          <li>Credit/debit card details</li>
+          <li>Billing address</li>
+          <li>Payment history</li>
+          <li>Tax identification numbers (if applicable)</li>
+        </ul>
+        <p class="note">
+          <em>Note: Payment information is processed by secure third-party payment processors.
+          We do not store complete credit card numbers on our servers.</em>
+        </p>
 
-    <h2>7. Third-Party Links</h2>
-    <p>
-      Our website may contain links to third-party sites. We are not responsible for the privacy practices or content of these external websites.
-    </p>
+        <p><strong>User Content:</strong></p>
+        <ul>
+          <li>Files, documents, and data you upload or create</li>
+          <li>Messages and communications within the platform</li>
+          <li>Settings and preferences</li>
+          <li>Feedback, survey responses, and support requests</li>
+        </ul>
 
-    <h2>8. Changes to This Policy</h2>
-    <p>
-      We may update this Privacy Policy from time to time. Any changes will be posted on this page with the effective date updated.
-    </p>
+        <h3>2.2 Information Collected Automatically</h3>
+        <p><strong>Usage Information:</strong></p>
+        <ul>
+          <li>Pages visited and features used</li>
+          <li>Time spent on different sections</li>
+          <li>Click patterns and navigation paths</li>
+          <li>Search queries within the application</li>
+          <li>Error logs and crash reports</li>
+          <li>Performance metrics</li>
+        </ul>
 
-    <h2>9. Contact Us</h2>
-    <p>
-      If you have any questions or concerns about this Privacy Policy, please contact us at:
-      <br>Email:info&#64;zuoralabs.com
-      <br>Phone: +94 76 675 8900
-    </p>
+        <p><strong>Device Information:</strong></p>
+        <ul>
+          <li>Device type, model, and manufacturer</li>
+          <li>Operating system and version</li>
+          <li>Browser type and version</li>
+          <li>IP address</li>
+          <li>Device identifiers</li>
+          <li>Screen resolution and display settings</li>
+          <li>Language preferences</li>
+          <li>Time zone</li>
+        </ul>
 
-    <button class="close-btn" (click)="close()">Close</button>
+        <p><strong>Location Data:</strong></p>
+        <ul>
+          <li>IP-based approximate location (country, city)</li>
+          <li>GPS location (only if you grant permission for mobile apps)</li>
+          <li>Time zone information</li>
+        </ul>
+
+        <p><strong>Cookies & Tracking Technologies:</strong></p>
+        <ul>
+          <li>Session cookies (essential for functionality)</li>
+          <li>Preference cookies (remember your settings)</li>
+          <li>Analytics cookies (understand usage patterns)</li>
+          <li>Advertising cookies (if applicable)</li>
+          <li>Local storage and cache data</li>
+        </ul>
+
+        <h3>2.3 Information from Third-Party Sources</h3>
+        <p>We may receive information from:</p>
+        <ul>
+          <li>Social media platforms (if you connect accounts or use social login)</li>
+          <li>Payment processors (transaction confirmations)</li>
+          <li>Analytics providers (aggregated usage statistics)</li>
+          <li>Marketing partners (campaign performance)</li>
+          <li>Public databases (for verification purposes)</li>
+          <li>Business partners (if you access our Services through partner platforms)</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>3. How We Use Your Information</h2>
+
+        <h3>3.1 Service Provision and Improvement</h3>
+        <ul>
+          <li>Providing and improving our services</li>
+          <li>Process transactions and send transaction confirmations</li>
+          <li>Manage your account and provide customer support</li>
+          <li>Send service-related communications (updates, security alerts)</li>
+          <li>Improve, personalize, and expand our Services</li>
+          <li>Develop new features and functionality</li>
+          <li>Understand how users interact with our Services</li>
+          <li>Fix bugs and technical issues</li>
+        </ul>
+
+        <h3>3.2 Communication</h3>
+        <ul>
+          <li>Responding to inquiries and support requests</li>
+          <li>Send administrative information (policy changes, updates)</li>
+          <li>Sending updates about our company, services, or events (if you opt-in)</li>
+          <li>Request feedback and surveys</li>
+          <li>Send marketing communications (you can opt out)</li>
+        </ul>
+
+        <h3>3.3 Security and Fraud Prevention</h3>
+        <ul>
+          <li>Detect, prevent, and address security threats</li>
+          <li>Monitor for fraudulent or suspicious activity</li>
+          <li>Verify user identity</li>
+          <li>Protect against unauthorized access</li>
+          <li>Enforce our Terms and Conditions</li>
+        </ul>
+
+        <h3>3.4 Analytics and Research</h3>
+        <ul>
+          <li>Analyzing website usage to enhance performance and usability</li>
+          <li>Conduct research and development</li>
+          <li>Create aggregated, anonymized statistics</li>
+          <li>Measure marketing campaign effectiveness</li>
+          <li>Understand user demographics and preferences</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>4. Sharing Your Information</h2>
+
+        <div class="highlight-box">
+          <p><strong>We do NOT sell or share your personal information with third parties for marketing purposes.</strong></p>
+        </div>
+
+        <p>We may share your information in the following circumstances:</p>
+
+        <h3>4.1 Service Providers and Partners</h3>
+        <p>We share data with trusted service providers to help operate our services:</p>
+        <ul>
+          <li>Cloud Hosting: AWS, Microsoft Azure, Google Cloud Platform</li>
+          <li>Payment Processing: Stripe, PayPal, other payment gateways</li>
+          <li>Analytics: Google Analytics, Mixpanel</li>
+          <li>Email Services: SendGrid, Mailchimp, AWS SES</li>
+          <li>Customer Support: Zendesk, Intercom</li>
+          <li>Content Delivery: Cloudflare, AWS CloudFront</li>
+          <li>Marketing Tools: Google Ads, Facebook Ads</li>
+        </ul>
+        <p>These providers are contractually obligated to protect your data and use it only for specified purposes.</p>
+
+        <h3>4.2 Legal Requirements and Compliance</h3>
+        <p>We may disclose your information to comply with legal obligations, including:</p>
+        <ul>
+          <li>Court orders or subpoenas</li>
+          <li>Law enforcement requests</li>
+          <li>Protection of our rights, property, or safety</li>
+          <li>Investigation of fraud or security issues</li>
+        </ul>
+
+        <h3>4.3 Business Transfers</h3>
+        <p>If we are involved in a merger, acquisition, sale of assets, or bankruptcy, your information may be
+        transferred as part of that transaction. We will notify you of any such change.</p>
+
+        <h3>4.4 With Your Consent</h3>
+        <p>We may share your information for other purposes with your explicit consent.</p>
+      </div>
+
+      <div class="section">
+        <h2>5. Security of Your Information</h2>
+        <p>We implement industry-standard security measures to protect your data from unauthorized access,
+        disclosure, or alteration:</p>
+
+        <h3>Technical Measures:</h3>
+        <ul>
+          <li>Encryption in transit (TLS/SSL)</li>
+          <li>Encryption at rest for sensitive data</li>
+          <li>Secure password hashing</li>
+          <li>Regular security audits and penetration testing</li>
+          <li>Intrusion detection and prevention systems</li>
+          <li>Web application firewalls</li>
+          <li>DDoS protection</li>
+        </ul>
+
+        <h3>Administrative Measures:</h3>
+        <ul>
+          <li>Employee training on data protection</li>
+          <li>Access controls and least-privilege principles</li>
+          <li>Background checks for employees with data access</li>
+          <li>Confidentiality agreements</li>
+          <li>Incident response procedures</li>
+        </ul>
+
+        <div class="warning-box">
+          <p><strong>Note:</strong> No method of transmission over the internet is 100% secure.
+          While we strive to protect your data, we cannot guarantee absolute security.</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>6. Your Rights</h2>
+
+        <h3>6.1 All Users</h3>
+        <p>You have the right to:</p>
+        <ul>
+          <li><strong>Access:</strong> Request access to the personal data we hold about you</li>
+          <li><strong>Correction:</strong> Request corrections of your personal information</li>
+          <li><strong>Deletion:</strong> Request deletions of your personal information</li>
+          <li><strong>Export:</strong> Download your data in a portable format</li>
+          <li><strong>Opt-out:</strong> Opt out of receiving marketing communications</li>
+          <li><strong>Object:</strong> Object to certain processing activities</li>
+        </ul>
+
+        <h3>6.2 EEA/UK Users (GDPR)</h3>
+        <p>Additional rights include:</p>
+        <ul>
+          <li>Restriction: Limit how we process your data</li>
+          <li>Data Portability: Receive data in machine-readable format</li>
+          <li>Withdraw Consent: Revoke consent for processing</li>
+          <li>Lodge Complaint: File complaint with supervisory authority</li>
+        </ul>
+
+        <h3>6.3 California Users (CCPA/CPRA)</h3>
+        <p>California residents have rights to:</p>
+        <ul>
+          <li>Know what personal information is collected</li>
+          <li>Know if personal information is sold or shared</li>
+          <li>Opt-out of sale of personal information</li>
+          <li>Request deletion of personal information</li>
+          <li>Non-discrimination for exercising rights</li>
+        </ul>
+
+        <h3>6.4 How to Exercise Your Rights</h3>
+        <p>To exercise any of these rights, please contact us at: <strong>info&#64;zuoralabs.com</strong></p>
+        <p>We will respond within 30 days for GDPR requests and 45 days for CCPA requests.</p>
+      </div>
+
+      <div class="section">
+        <h2>7. Data Retention</h2>
+        <p>We retain your information for as long as necessary to:</p>
+        <ul>
+          <li>Provide our Services to you</li>
+          <li>Comply with legal obligations (tax records: 7 years minimum)</li>
+          <li>Resolve disputes and enforce agreements</li>
+          <li>Support business operations and analytics</li>
+        </ul>
+
+        <p><strong>Specific Retention Periods:</strong></p>
+        <ul>
+          <li>Account data: Until account deletion + 90 days backup period</li>
+          <li>Payment records: 7 years (legal requirement)</li>
+          <li>User content: Until deletion by user or account closure</li>
+          <li>Usage logs: 24 months</li>
+          <li>Support tickets: 3 years</li>
+          <li>Marketing data: Until you withdraw consent + 30 days</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>8. International Data Transfers</h2>
+        <p>We are based in Sri Lanka and serve users globally. Your information may be transferred to and
+        processed in countries outside your residence, including:</p>
+        <ul>
+          <li>United States (cloud hosting)</li>
+          <li>European Union (data centers)</li>
+          <li>Other countries where our service providers operate</li>
+        </ul>
+        <p>We ensure appropriate safeguards through Standard Contractual Clauses (SCCs), Data Processing
+        Agreements (DPAs), and adequate data protection measures.</p>
+      </div>
+
+      <div class="section">
+        <h2>9. Cookies and Tracking</h2>
+
+        <h3>Types of Cookies We Use:</h3>
+
+        <p><strong>Essential Cookies (Required):</strong></p>
+        <ul>
+          <li>Session management and authentication</li>
+          <li>Security features</li>
+          <li>Load balancing</li>
+        </ul>
+
+        <p><strong>Functional Cookies:</strong></p>
+        <ul>
+          <li>Remember your preferences and settings</li>
+          <li>Language selection</li>
+          <li>Remember login information</li>
+        </ul>
+
+        <p><strong>Analytics Cookies:</strong></p>
+        <ul>
+          <li>Google Analytics</li>
+          <li>Track usage patterns and performance</li>
+          <li>Understand user behavior</li>
+        </ul>
+
+        <p><strong>Marketing Cookies:</strong></p>
+        <ul>
+          <li>Track marketing campaign effectiveness</li>
+          <li>Retargeting and personalized ads</li>
+          <li>Social media integration</li>
+        </ul>
+
+        <h3>Managing Cookies:</h3>
+        <p>You can control cookies through:</p>
+        <ul>
+          <li>Browser settings (delete or block cookies)</li>
+          <li>Our cookie consent banner</li>
+          <li>Google Analytics opt-out: <a href="https://tools.google.com/dlpage/gaoptout" target="_blank">https://tools.google.com/dlpage/gaoptout</a></li>
+        </ul>
+        <p class="note"><em>Note: Disabling essential cookies may affect functionality.</em></p>
+      </div>
+
+      <div class="section">
+        <h2>10. Third-Party Links</h2>
+        <p>Our website may contain links to third-party sites. We are not responsible for the privacy practices
+        or content of these external websites. We encourage you to review their privacy policies.</p>
+      </div>
+
+      <div class="section">
+        <h2>11. Children's Privacy</h2>
+        <p>Our Services are not directed to children under 13. We do not knowingly collect personal information
+        from children under 13. If you are a parent or guardian and believe your child has provided us with
+        personal information, contact us immediately at <strong>info&#64;zuoralabs.com</strong>, and we will
+        delete such information.</p>
+        <p>Users aged 13-17 should have parental consent before using our Services.</p>
+      </div>
+
+      <div class="section">
+        <h2>12. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with
+        the effective date updated. We will notify you of material changes by:</p>
+        <ul>
+          <li>Email notification</li>
+          <li>Prominent notice on our website</li>
+          <li>In-app notification</li>
+        </ul>
+        <p>Continued use of our Services after changes constitutes acceptance of the updated policy.</p>
+      </div>
+
+      <div class="contact-info">
+        <h2>13. Contact Us</h2>
+        <p>If you have any questions or concerns about this Privacy Policy, please contact us at:</p>
+        <p>
+          <strong>Email:</strong> info&#64;zuoralabs.com<br>
+          <strong>Phone:</strong> +94 76 675 8900<br>
+          <strong>Company:</strong> Zuora Labs<br>
+          <strong>Location:</strong> Sri Lanka
+        </p>
+        <p><strong>Response Time:</strong> We aim to respond to all inquiries within 5 business days.</p>
+      </div>
+
+      <div class="section">
+        <h2>14. Supervisory Authority</h2>
+        <p>If you are in the EEA/UK and believe we have not adequately addressed your concerns, you have the
+        right to lodge a complaint with your local data protection authority.</p>
+      </div>
+
+      <div class="highlight-box">
+        <p><strong>By using our Services, you acknowledge that you have read and understood this Privacy Policy
+        and consent to the collection, use, and disclosure of your information as described herein.</strong></p>
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <button class="action-btn close-footer-btn" (click)="close()">Close</button>
+    </div>
   </div>
 </div>
