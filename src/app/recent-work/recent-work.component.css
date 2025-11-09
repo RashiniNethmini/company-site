@@ -1,0 +1,75 @@
+/* Container */
+.recent-work-container {
+  width: 100%;
+  max-width: 1200px;       /* ✅ Prevents container from becoming too wide */
+  margin: 0 auto;          /* ✅ Centers content on large monitors */
+  padding: 40px 20px;
+  box-sizing: border-box;  /* ✅ Avoids horizontal overflow */
+}
+
+/* Title */
+.section-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #1a1a1a;
+}
+
+/* Grid layout */
+.work-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* ✅ Auto responsive */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Card */
+.work-card {
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.work-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+/* Image */
+.work-image {
+  width: 100%;
+  height: 180px;   /* ✅ bigger & consistent */
+  object-fit: cover;
+  display: block;
+}
+
+/* Text */
+.work-content {
+  padding: 15px;
+}
+
+.work-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 6px 0;
+}
+
+.work-desc {
+  font-size: 14px;
+  color: #5c5c5c;
+  margin: 0;
+}
+
+/* ✅ Mobile Fix */
+@media (max-width: 480px) {
+  .work-image {
+    height: 150px;
+  }
+  .section-title {
+    font-size: 22px;
+  }
+}

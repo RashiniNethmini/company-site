@@ -3,13 +3,18 @@ import { RouterOutlet } from '@angular/router';
 import { NavBarComponent } from "./nav-bar/nav-bar.component";
 import { HomeComponent } from "./home/home.component";
 import { FooterComponent } from "./footer/footer.component";
+import { ServiceComponent } from './service/service.component';
+import { ChooseUsComponent } from './choose-us/choose-us.component';
+import { RecentWorkComponent } from './recent-work/recent-work.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { ClientComponent } from './client/client.component';
 import { ContactUsComponent } from "./contact-us/contact-us.component";
 import { PrivacyPolicyComponent } from "./pages/privacy-policy/privacy-policy.component";
 import { TermsAndConditionsComponent } from "./pages/terms-and-conditions/terms-and-conditions.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavBarComponent, HomeComponent, FooterComponent, ContactUsComponent, ],
+  imports: [RouterOutlet, NavBarComponent, HomeComponent, FooterComponent, ChooseUsComponent, ServiceComponent, RecentWorkComponent, AboutUsComponent, ClientComponent, ContactUsComponent, ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

@@ -1,0 +1,80 @@
+.about-container {
+  width: 100%;
+  padding: 40px 20px;
+  text-align: justify;
+  max-width: 1200px; 
+  margin: 0 auto;
+  box-sizing: border-box; 
+}
+
+/* Title */
+.section-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+/* Description */
+.description {
+  max-width: 100%;
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 35px;
+  line-height: 1.6;
+}
+
+/* Founder Centering Wrapper */
+.founder-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Founder Card */
+.founder-card {
+  width: 230px;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.founder-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+}
+
+/* Founder Image */
+.founder-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+/* Founder Name */
+.founder-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 5px 0;
+}
+
+/* Founder Role */
+.founder-role {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .founder-wrapper {
+    justify-content: center;
+  }
+}
