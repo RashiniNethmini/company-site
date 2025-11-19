@@ -1,7 +1,7 @@
 <!-- privacy-policy.component.html -->
 <div class="privacy-overlay">
   <div class="privacy-modal">
-    <button class="close-btn" (click)="goBack()" aria-label="Close">×</button>
+    <button class="close-btn" (click)="close()" aria-label="Close">×</button>
 
     <div class="modal-header">
       <h1>Privacy Policy</h1>
@@ -390,8 +390,7 @@
     </div>
 
     <div class="modal-footer">
-      <button class="action-btn close-footer-btn" (click)="goBack()">Close</button>
+      <button class="action-btn close-footer-btn" (click)="close()">Close</button>
     </div>
   </div>
 </div>
-
