@@ -3,7 +3,7 @@
 }
 
 .footer-container {
-  width: 100%;
+  width: 100vW;
   background-color: #111827;
   display: flex;
   justify-content: space-between;

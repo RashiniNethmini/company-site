@@ -1,13 +1,15 @@
 // privacy-policy.component.ts
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-privacy-policy',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './privacy-policy.component.html',
   styleUrls: ['./privacy-policy.component.css']
 })
 export class PrivacyPolicyComponent {
-  @Output() closeModal = new EventEmitter<void>();
 
   constructor() {
     // Prevent body scroll when modal is open
@@ -19,14 +21,7 @@ export class PrivacyPolicyComponent {
     document.body.style.overflow = 'auto';
   }
 
-  close(): void {
-    this.closeModal.emit();
-  }
-
-  // Optional: Close modal when clicking outside
-  closeOnOverlayClick(event: MouseEvent): void {
-    if ((event.target as HTMLElement).classList.contains('privacy-overlay')) {
-      this.close();
-    }
+  goBack(): void {
+    window.history.back();
   }
 }

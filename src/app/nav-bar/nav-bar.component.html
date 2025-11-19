@@ -6,18 +6,19 @@
 
     <!-- Hamburger menu button for tablet/mobile -->
     <button class="hamburger-menu-btn" (click)="toggleMenu()">
-      <span class="material-icons text-white text-3xl" *ngIf="!isMenuOpen()">menu</span>
-      <span class="material-icons text-white text-3xl" *ngIf="isMenuOpen()">close</span>
+      <span class="material-icons text-white text-3xl" *ngIf="!menuOpen">menu</span>
+      <span class="material-icons text-white text-3xl" *ngIf="menuOpen">close</span>
     </button>
 
     <!-- Navigation links -->
-    <nav class="nav-links" [ngClass]="{'menu-open': isMenuOpen()}">
+    <nav class="nav-links" [ngClass]="{'menu-open': menuOpen}">
       <ul>
-        <li><a routerLink="/services" routerLinkActive="active-link" (click)="toggleMenu()">Services</a></li>
-        <li><a routerLink="/works" routerLinkActive="active-link" (click)="toggleMenu()">Works</a></li>
-        <li><a routerLink="/about" routerLinkActive="active-link" (click)="toggleMenu()">About Us</a></li>
-        <li><a routerLink="/why-us" routerLinkActive="active-link" (click)="toggleMenu()">Why Us</a></li>
-        <li><a routerLink="/contact" routerLinkActive="active-link" (click)="toggleMenu()">Contact</a></li>
+        <li><a routerLink="/home" routerLinkActive="active-link" >Home</a></li>
+        <li><a routerLink="/services" routerLinkActive="active-link" >Services</a></li>
+        <li><a routerLink="/works" routerLinkActive="active-link" >Works</a></li>
+        <li><a routerLink="/about" routerLinkActive="active-link" >About Us</a></li>
+        <li><a routerLink="/why-us" routerLinkActive="active-link" >Why Us</a></li>
+        <li><a routerLink="/contact" routerLinkActive="active-link" >Contact</a></li>
       </ul>
     </nav>
   </div>

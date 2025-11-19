@@ -1,7 +1,7 @@
 /* ===== Base (Desktop First) ===== */
 .home-container {
   width: 100%;
-  min-height: 85vh;
+  height: 85.5vh;
   display: flex;
   justify-content: center;
   align-items: center;
