@@ -177,13 +177,21 @@
 }
 
 /* Large Mobile: width ≤ 425px */
-@media (max-width: 425px) {
+@media (max-width: 450px) {
   .section-title {
     font-size: 2em;
   }
 
   .contact-form, .contact-details {
     padding: 20px;
+  }
+
+  .form-row {
+    width: 90%;
+  }
+
+  .form-row.full-width{
+    width: 93%;
   }
 
   .send-message-button {

@@ -6,10 +6,11 @@ import { FooterComponent } from "./footer/footer.component";
 import { ContactUsComponent } from "./contact-us/contact-us.component";
 import { PrivacyPolicyComponent } from "./pages/privacy-policy/privacy-policy.component";
 import { TermsAndConditionsComponent } from "./pages/terms-and-conditions/terms-and-conditions.component";
+import { ServiceComponent } from "./service/service.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavBarComponent, HomeComponent, FooterComponent, ContactUsComponent, ],
+  imports: [RouterOutlet, NavBarComponent, HomeComponent, FooterComponent, ContactUsComponent, ServiceComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
