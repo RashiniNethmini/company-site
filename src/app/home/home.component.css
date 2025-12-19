@@ -1,18 +1,48 @@
-/* ===== Base (Desktop First) ===== */
+/* ===== Home Section ===== */
 .home-container {
+  position: relative;
   min-height: 85vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
   background: linear-gradient(135deg, #4A6CF7, #0899e1, #22aaee, #00CFFF);
-  cursor: default;
   color: white;
   text-align: center;
   font-family: 'Arial', sans-serif;
+
   padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  cursor: default;
+  overflow: hidden;
+}
+
+/* === Circular Background Image === */
+.home-container::before {
+  content: "";
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  background-image: url("/assets/images/download.jpeg");
+  background-size: cover;
+  background-position: center;
+
+  border-radius: 50%;
+  opacity: 0.85;
+
+  top: 55%;
+  right: -50px;
+  transform: translateY(-50%);
+
+  z-index: 0;
+}
+
+/* Keep content above background */
+.home-container > * {
+  position: relative;
+  z-index: 1;
 }
 
 /* === Headings === */
@@ -28,7 +58,6 @@
   font-weight: 700;
   margin-top: -0.5em;
   margin-bottom: 0.5em;
-  line-height: 1.2;
 }
 
 /* === Paragraph === */
@@ -56,27 +85,20 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  font-family: 'Arial', sans-serif;
   font-size: 1em;
   font-weight: 700;
   padding: 14px 28px;
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: all 0.3s ease;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* === Get in touch button === */
+/* === Get in touch === */
 .get-in-touch-button {
   background-color: #FFD700;
   color: #222;
-}
-
-.get-in-touch-button {
-  background-color: #FFD700;
-  color: #222;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 .get-in-touch-button:hover {
@@ -84,7 +106,7 @@
   transform: translateY(-2px);
 }
 
-/* === View work button === */
+/* === View work === */
 .view-work-button {
   background-color: rgba(255, 255, 255, 0.2);
   color: #fff;
@@ -95,191 +117,100 @@
   transform: translateY(-2px);
 }
 
-.view-work-button .caret-icon svg,
-.get-in-touch-button svg {
-  width: 20px;
-  height: 20px;
-}
-
-/* ===== Footer Base ===== */
-.footer-container {
-  width: 100%;
-  background-color: #111827;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 25px 7.5rem;
-  cursor: default;
-  flex-wrap: wrap;
-}
-
-.footer-left {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.footer-text1 {
-  color: #9CA3AF;
-  margin: 0;
-  font-size: 1rem;
-}
-
-.footer-text2 {
-  color: #D1D5DB;
-  margin: 0;
-  font-size: 0.85rem;
-}
-
-.footer-right {
-  display: flex;
-  align-items: center;
-}
-
-.footer-links ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.footer-links a {
-  text-decoration: none;
-  color: #9CA3AF;
-  font-family: 'Arial', sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
-  transition: color 0.3s ease;
-  cursor: pointer;
-}
-
-.footer-links a:hover {
-  color: #ffffff;
-}
-
-.separator-line {
-  width: 100%;
-  height: 2px;
-  background-color: #4A6CF7;
-}
-
 /* ===== Responsive ===== */
 
-/* Tablet (<=1000px) */
+/* Tablet */
 @media (max-width: 1000px) {
-  .home-container {
-    height: auto;
-    padding: 60px 20px;
-  }
-  .home-container h1 {
-    font-size: 2.6em;
-  }
-  .home-container h2 {
-    font-size: 2.4em;
-  }
-  .home-container p {
-    font-size: 1.05em;
-    max-width: 650px;
+  .home-container::before {
+    width: 340px;
+    height: 340px;
+    right: -100px;
+    opacity: 0.85;
   }
 
-  .footer-container {
-    padding: 20px 3rem;
-    flex-direction: column;
-    text-align: center;
-    gap: 15px;
-  }
-  .footer-right {
-    justify-content: center;
-  }
+  .home-container h1 { font-size: 2.6em; }
+  .home-container h2 { font-size: 2.4em; }
 }
 
-/* Mobile Large (<=425px) */
+/* Mobile Large */
 @media (max-width: 425px) {
   .home-container {
     padding: 40px 15px;
   }
+
+  .home-container::before {
+    width: 240px;
+    height: 240px;
+    top: 8%;
+    right: 50%;
+    transform: translateX(50%);
+    opacity: 0.85;
+  }
+
   .home-container h1 {
+    font-size: 2.3em;
+  }
+
+  .home-container h2 {
     font-size: 2em;
   }
-  .home-container h2 {
-    font-size: 1.9em;
-  }
-  .home-container p {
-    font-size: 0.95em;
-    line-height: 1.5;
-    max-width: 100%;
-  }
+
   .button-group {
     flex-direction: column;
-    gap: 12px;
   }
+
   .get-in-touch-button,
   .view-work-button {
     width: 100%;
     justify-content: center;
-    padding: 12px 20px;
-  }
-
-  .footer-container {
-    padding: 20px;
-    flex-direction: column;
-    text-align: center;
-    gap: 12px;
-  }
-  .footer-links ul {
-    gap: 12px;
   }
 }
 
-/* Mobile Medium (<=375px) */
-@media (max-width: 375px) {
+/* Mobile Medium */
+@media (max-width: 385px) {
+
+  .home-container::before {
+    width: 200px;
+    height: 200px;
+    top: 40%;
+    left: 30%;
+    transform: translateX(50%);
+    opacity: 0.85;
+  }
+
   .home-container h1 {
+    font-size: 2.2em;
+  }
+
+  .home-container h2 {
+    font-size: 2em;
+  }
+
+  .home-container p {
+    font-size: 0.9em;
+  }
+}
+
+/* Mobile Small */
+@media (max-width: 320px) {
+  .home-container::before {
+    width: 160px;
+    height: 160px;
+    top: 60%;
+    left: 30%;
+    transform: translateX(50%);
+    opacity: 0.85;
+  }
+
+  .home-container h1 {
+    font-size: 2em;
+  }
+
+  .home-container h2 {
     font-size: 1.8em;
   }
-  .home-container h2 {
-    font-size: 1.6em;
-  }
+
   .home-container p {
     font-size: 0.9em;
-  }
-
-  .footer-text1 {
-    font-size: 0.95rem;
-  }
-  .footer-text2 {
-    font-size: 0.8rem;
-  }
-  .footer-links a {
-    font-size: 0.9rem;
-  }
-}
-
-/* Mobile Small (<=320px) */
-@media (max-width: 320px) {
-  .home-container h1 {
-    font-size: 1.6em;
-  }
-  .home-container h2 {
-    font-size: 1.4em;
-  }
-  .home-container p {
-    font-size: 0.85em;
-  }
-  .get-in-touch-button,
-  .view-work-button {
-    font-size: 0.9em;
-    padding: 10px 16px;
-  }
-
-  .footer-text1 {
-    font-size: 0.9rem;
-  }
-  .footer-text2 {
-    font-size: 0.75rem;
-  }
-  .footer-links a {
-    font-size: 0.85rem;
   }
 }
